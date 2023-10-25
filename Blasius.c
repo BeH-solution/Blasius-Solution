@@ -114,7 +114,9 @@ int   main( int argc, char *argv[] )
       newline;
       fprintf( stderr, "     >>>  Select method number : " );
 
-
+      /*   === Below routine makes compilation error in MS Visual studio ===
+           === So just choose solution method before file open           ===
+	   
       gets( inbuf ); sscanf( inbuf, "%d", &nmethod );
       switch( nmethod ) {
           case 1:
@@ -132,13 +134,21 @@ int   main( int argc, char *argv[] )
           default:
                     break;
       }
-      fpout = fopen( outfile, "w" ); 
+      */
+      method  = "Newton-Rhapson method";
+      outfile = "Blasius_01.out";	
+      // fpout = fopen( outfile, "w" ); 
+      fopen(&fpout, outfile, "w" );   // for MS Visual Studio
 
 
      /*----------------------------------------------------------------!
       *     Execute shooting
       *----------------------------------------------------------------!
       */
+	
+      /*   === Below routine occurs compilation error in MS Visual studio ===
+           === So just choose proper solution method                      ===
+
       newline; 
       switch( nmethod ) {
           case 1:
@@ -153,6 +163,8 @@ int   main( int argc, char *argv[] )
           default:
                     exit(0);
       }
+      */
+     Shoot_NR(ne, a, b, h, f, eps, BlasiusEqn);
 
 
      /*----------------------------------------------------------------!
