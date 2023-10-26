@@ -135,10 +135,12 @@ int   main( int argc, char *argv[] )
                     break;
       }
       */
+	
       method  = "Newton-Rhapson method";
       outfile = "Blasius_01.out";	
+      
       // fpout = fopen( outfile, "w" ); 
-      fopen(&fpout, outfile, "w" );   // for MS Visual Studio
+      fopen_s(&fpout, outfile, "w" );   // for MS Visual Studio
 
 
      /*----------------------------------------------------------------!
