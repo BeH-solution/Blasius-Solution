@@ -114,8 +114,8 @@ int   main( int argc, char *argv[] )
       newline;
       fprintf( stderr, "     >>>  Select method number : " );
 
-      /*   === Below routine makes compilation error in MS Visual studio ===
-           === So just choose solution method before file open           ===
+      /*   === Below routine makes compilation error in MS Visual Studio   ===
+           === So just choose one solution method before output file open  ===
 	   
       gets( inbuf ); sscanf( inbuf, "%d", &nmethod );
       switch( nmethod ) {
@@ -148,8 +148,8 @@ int   main( int argc, char *argv[] )
       *----------------------------------------------------------------!
       */
 	
-      /*   === Below routine occurs compilation error in MS Visual studio ===
-           === So just choose proper solution method                      ===
+      /*   === Below routine occurs compilation error in MS Visual Studio ===
+           === So just choose one proper solution method user want        ===
 
       newline; 
       switch( nmethod ) {
